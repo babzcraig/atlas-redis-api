@@ -28,6 +28,8 @@ app.use(morgan('dev'));
 
 // Allow us to parse incoming form data
 app.use(bodyParser.json());
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: 'application/json' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Return the famous "Hello World!"
@@ -44,7 +46,4 @@ app.listen(PORT, () => {
   console.log('Server listening on port: ', PORT);
 });
 
-
-
-
-
+module.exports = app;
