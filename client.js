@@ -1,6 +1,5 @@
 import redis from 'redis';
 
-
 // Set up redis with our preferred options
 var client = redis.createClient({
   host : 'localhost' || process.env.REDIS_HOST,
